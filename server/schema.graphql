@@ -1,10 +1,10 @@
-#Defining a custom object
+#Making non-nullable
 type Query {
   job: Job
 }
 
 type Job {
-  id: ID
+  id: ID!
   title: String
   description: String
 }
