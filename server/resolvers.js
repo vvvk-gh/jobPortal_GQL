@@ -1,11 +1,8 @@
+// Getting the jobs data from the db query which is function at jobs.js
+import { getJobs } from "./db/jobs.js"
+
 export const resolvers = {
     Query: {
-        job: () => {
-            return {
-                id: null,
-                title: 'Software Engineer',
-                description: 'Testing debugging and building the user stories'
-            }
-        }
+        jobs: () => getJobs(),
     }
 }

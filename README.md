@@ -18,3 +18,12 @@ type Job {
 ```
 
 In such cases the query returns an error if the title is null
+
+We can also add the additional fields in the resolvers which are not specified at schema but Graphql doesnt show any error but avoids sending it.
+
+## Knex
+
+Its a query builder for sql db in js
+it an data access layer which helps in buliding a connection to server to db.
+
+refer the files at `server/db/` for better understanding

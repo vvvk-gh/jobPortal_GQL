@@ -1,10 +1,10 @@
 #Making non-nullable
 type Query {
-  job: Job
+  jobs: [Job]
 }
 
 type Job {
   id: ID!
-  title: String
+  title: String!
   description: String
 }
