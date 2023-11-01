@@ -1,10 +1,16 @@
 #adding a date field which is not in db so convert existing db one into db
 type Query {
-  jobs: [Job]
+  jobs: [Job!] #added the non nullable for jobs
 }
 
+"""
+Each job represents job on our portal
+"""
 type Job {
   id: ID!
+  """
+  the __date__ when the job was published will be in ISO8601 format. E.g `2012-12-12`
+  """
   date: String!
   title: String!
   description: String
