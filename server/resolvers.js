@@ -1,13 +1,16 @@
-// Getting the jobs data from the db query which is function at jobs.js
 import { getJobs } from "./db/jobs.js"
+import { getCompany } from "./db/companies.js"
 
 export const resolvers = {
     Query: {
-        jobs: () => getJobs(),
+        jobs: () => getJobs()
     },
 
     Job: {
-        date: (job) => ISOtoDate(job.createdAt),
+        /*each job is associated with a company 
+        so we keep company inside a job at schema */
+        company: (job) => getCompany(job.companyId),
+        date: (job) => ISOtoDate(job.createdAt)
     }
 }
 

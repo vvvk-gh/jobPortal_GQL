@@ -1,11 +1,15 @@
-#adding a date field which is not in db so convert existing db one into db
 type Query {
-  jobs: [Job!] #added the non nullable for jobs
+  jobs: [Job!]
+  compaines: [Company!]
 }
 
-"""
-Each job represents job on our portal
-"""
+type Company {
+  id: ID!
+  name: String!
+  description: String
+}
+
+#associate each job with a company
 type Job {
   id: ID!
   """
@@ -13,5 +17,6 @@ type Job {
   """
   date: String!
   title: String!
+  company: Company! #Object association
   description: String
 }
