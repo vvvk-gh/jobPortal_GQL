@@ -1,6 +1,5 @@
 type Query {
   jobs: [Job!]
-  compaines: [Company!]
 }
 
 type Company {
